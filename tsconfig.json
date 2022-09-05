@@ -1,0 +1,26 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "strict": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "module": "es2020",
+    "target": "es2020",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "sourceMap": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.js"]
+}
