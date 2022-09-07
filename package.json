@@ -1,6 +1,6 @@
 {
   "name": "crystals-kyber-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "KYBER is an IND-CCA2-secure key encapsulation mechanism (KEM).",
   "author": {
