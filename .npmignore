@@ -3,7 +3,6 @@ coverage
 tests
 jest.config.js
 tsconfig.json
-kyber.jpg
 node_modules/
 *.log
 *.tgz
