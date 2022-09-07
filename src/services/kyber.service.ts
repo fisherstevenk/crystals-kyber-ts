@@ -312,11 +312,10 @@ export abstract class KyberService {
             default:
                 kyberSKBytes = KyberService.Kyber1024SKBytes;
         }
-
+        let index = privateKey.length - KyberService.paramsSymBytes;
         for (let i = 0; i < KyberService.paramsSymBytes; i++) {
-            const length = kyberSKBytes - KyberService.paramsSymBytes + i;
-            let skx = privateKey.slice(0, length);
-            kr[i] = Utilities.intToByte((kr[i]) ^ ((fail & 0xFF) & ((kr[i]) ^ (skx[i]))));
+            kr[i] = Utilities.intToByte((kr[i]) ^ ((fail & 0xFF) & ((kr[i]) ^ (privateKey[index]))));
+            index += 1;
         }
         const tempBuf: number[] = [];
         let ctr = 0;
