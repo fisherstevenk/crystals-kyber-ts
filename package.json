@@ -20,7 +20,8 @@
   "dependencies": {
     "alea-generator": ">=1.0.0",
     "crypto-js": ">=4.1.1",
-    "sha3": ">=2.1.4"
+    "sha3": ">=2.1.4",
+    "json5": ">=2.2.2"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
