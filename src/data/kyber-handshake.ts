@@ -4,8 +4,8 @@ import {KyberService} from "../services/kyber.service";
  * Kyber Handshake
  */
 export class KyberHandshake {
-    private _publicKey: number[] = [];
-    private _privateKey: number[] = [];
+    private _publicKey: number[];
+    private _privateKey: number[];
     private _remotePublicKey: number[] = [];
     private _cipherText: number[] = [];
     private _sharedSecret: number[] = [];
@@ -13,6 +13,9 @@ export class KyberHandshake {
     private _remoteCipherText: number[] = [];
 
     constructor(private kyberService: KyberService) {
+        const kyberKeys: number[][] = this.kyberService.generateKyberKeys();
+        this._publicKey = kyberKeys[0];
+        this._privateKey = kyberKeys[1];
     }
 
     /**
@@ -88,9 +91,11 @@ export class KyberHandshake {
     set privateKey(value: number[]) {
         this._privateKey = value;
     }
+
     get remotePublicKey(): number[] {
         return this._remotePublicKey;
     }
+
     set remotePublicKey(value: number[]) {
         this._remotePublicKey = value;
     }

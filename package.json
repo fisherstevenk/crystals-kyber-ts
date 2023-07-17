@@ -1,6 +1,6 @@
 {
   "name": "crystals-kyber-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "KYBER is an IND-CCA2-secure key encapsulation mechanism (KEM).",
   "author": {
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "jest": "^29.0.2",
-    "ts-jest": "^28.0.8"
+    "ts-jest": "^29.0.8"
   },
   "scripts": {
     "build": "rm -rf dist && tsc --project tsconfig.json",
